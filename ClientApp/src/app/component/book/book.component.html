@@ -1,0 +1,23 @@
+
+<div *ngIf="!book">Loading</div>
+<table class="table table-striped" *ngIf="book">
+    <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Rate</th>
+        <th>DateStart</th>
+        <th>DateEnd</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of book">
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.rate}}</td>
+            <td>{{item.datestart}}</td>
+            <td>{{item.dateread}}</td>
+        </tr>
+      
+    </tbody>
+</table>

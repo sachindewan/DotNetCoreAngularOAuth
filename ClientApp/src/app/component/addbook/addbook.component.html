@@ -1,0 +1,41 @@
+
+<form [formGroup]="addformbook" (ngSubmit)="addBook()">
+    <div class="alert alert-danger" *ngIf="showError">{{errorMessage}}</div>
+    <div class="form-group"> 
+     <label for="title" class="title">Title</label>
+     <input type="text" class="form-control" formControlName="title" id="title" placeholder="Book Title">
+    </div>
+    <div class="form-group"> 
+        <label for="auther" class="title">Auhter</label>
+        <input type="text" class="form-control" formControlName="auther" id="auther" placeholder="Book Auther">
+       </div>
+       <div class="form-group"> 
+        <label for="description" class="title">Description</label>
+        <input type="text" class="form-control" formControlName="description" id="description" placeholder="Book Description">
+       </div>
+    
+       <div class="row">
+           <div class="col-md-4 col-xs-4 col-sm-4">
+            <div class="form-group"> 
+                <label for="datestart" class="title">Title</label>
+                <input type="date" class="form-control" formControlName="datestart" id="datestart" placeholder="Book Start">
+               </div>
+           </div>
+           <div class="col-md-4 col-xs-4 col-sm-4">
+            <div class="form-group"> 
+                <label for="dateread" class="title">Book Read</label>
+                <input type="date" class="form-control" formControlName="dateread" id="dateread" placeholder="Book Read">
+               </div>
+           </div>
+           <div class="col-md-4 col-xs-4 col-sm-4">
+            <div class="form-group"> 
+                <label for="rating" class="title">Rating</label>
+                <input type="number"  min="0" max="5" formControlName="rate" class="form-control" id="rating" placeholder="Book Rating">
+               </div>
+           </div>
+        </div>
+        
+     <button class="btn btn-success" type="submit">Add</button>
+     <button class="btn btn-default" [routerLink]="['/books']">cancel</button>
+  
+</form>
